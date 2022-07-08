@@ -222,6 +222,11 @@ LocalErrorHandler:
         Me.Text = Me.Text & "  Version " & fileVersionInfo.FileVersion
     End Sub
 
+    Private Sub frmLogin_Shown(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Me.Shown
+        'Auto login
+        cmdOK_Click(cmdOK, New System.EventArgs)
+    End Sub
+
     Private Sub rtbName_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles rtbName.KeyPress
         Dim KeyAscii As Short = Asc(e.KeyChar)
         If KeyAscii = System.Windows.Forms.Keys.Return Then
