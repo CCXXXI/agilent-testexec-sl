@@ -231,6 +231,7 @@
     <Compile Include="modLocalization.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="TcpClient.vb" />
     <EmbeddedResource Include="frmErrorDialog.resX">
       <DependentUpon>frmErrorDialog.vb</DependentUpon>
     </EmbeddedResource>

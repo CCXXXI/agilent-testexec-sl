@@ -2257,7 +2257,13 @@ LocalErrorHandler:
     End Sub
 
     Private Sub BackgroundThread()
-        Console.WriteLine("test")
+        Dim client As New TcpClient()
+        While True
+            If client.Check() Then
+                ' todo
+                Console.WriteLine("!!!")
+            End If
+        End While
     End Sub
 
     Private Function YieldCalculation() As Single
