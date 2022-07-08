@@ -1,5 +1,8 @@
 Option Strict Off
 Option Explicit On
+
+Imports System.Threading
+
 Friend Class frmMain
 	Inherits System.Windows.Forms.Form
 #Region "Windows Form Designer generated code "
@@ -2249,9 +2252,13 @@ LocalErrorHandler:
             cmdLoadTestplan.Focus()
         End If
 
-
+        Dim thread As New Thread(AddressOf BackgroundThread)
+        thread.Start()
     End Sub
 
+    Private Sub BackgroundThread()
+        Console.WriteLine("test")
+    End Sub
 
     Private Function YieldCalculation() As Single
 
