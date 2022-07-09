@@ -20,7 +20,7 @@ Public Class TcpClient
             _networkStream.Read(bytes, 0, CInt(_tcpClient.ReceiveBufferSize))
             ' todo: check
             Dim response As String = Encoding.ASCII.GetString(bytes)
-            Return String.Compare(response, "test")
+            Return String.Compare(response, "test") = 0
         Else
             If Not _networkStream.CanRead Then
                 Console.WriteLine("cannot not write data to this stream")
