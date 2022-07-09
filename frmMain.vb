@@ -12,7 +12,7 @@ Friend Class frmMain
 			If m_InitializingDefInstance Then
 				m_vb6FormDefInstance = Me
 			Else
-				Try 
+				Try
 					'For the start-up form, the first instance created is the default instance.
 					If System.Reflection.Assembly.GetExecutingAssembly.EntryPoint.DeclaringType Is Me.GetType Then
 						m_vb6FormDefInstance = Me
@@ -741,7 +741,7 @@ Friend Class frmMain
         Me.ResumeLayout(False)
 
     End Sub
-#End Region 
+#End Region
 #Region "Upgrade Support "
 	Private Shared m_vb6FormDefInstance As frmMain
 	Private Shared m_InitializingDefInstance As Boolean
@@ -758,7 +758,7 @@ Friend Class frmMain
 			m_vb6FormDefInstance = Value
 		End Set
 	End Property
-#End Region 
+#End Region
 	'*****************************************************************************
     'me.frm
     'me.frx
@@ -1308,7 +1308,7 @@ LocalErrorHandler:
 
 
     End Sub
-	
+
     Private Sub frmMain_Closed(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Closed 'TxSLErrorTrapSite
 
         On Error GoTo LocalErrorHandler
@@ -1892,7 +1892,7 @@ LocalErrorHandler:
         'all the report messages.
 
       'It is essentially a four string shift register
-      'old way 
+      'old way
       'msReportBlock1 = msReportBlock2
       'msReportBlock2 = msReportBlock3
       'msReportBlock3 = msReportBlock4
@@ -2118,8 +2118,8 @@ LocalErrorHandler:
         'into the correct configuration following
         'the start of a testplan.
         'Dim nMaxTests As Short
-		' MBT 0002401 : TFS 0097976 lekf	
-		' in VB.NET need declare as Integer for 32bit signed integer		
+		' MBT 0002401 : TFS 0097976 lekf
+		' in VB.NET need declare as Integer for 32bit signed integer
 		Dim nMaxTests As Integer
 
         On Error GoTo LocalErrorHandler
