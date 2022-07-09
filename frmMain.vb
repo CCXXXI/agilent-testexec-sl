@@ -2260,7 +2260,9 @@ LocalErrorHandler:
         Dim client As New TcpClient()
         While True
             If client.Check() Then
-                cmdRun_Click(cmdRun, New System.EventArgs)
+                Invoke(Sub()
+                           cmdRun_Click(cmdRun, New System.EventArgs)
+                       End Sub)
             End If
         End While
     End Sub
