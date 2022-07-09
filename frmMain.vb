@@ -2260,8 +2260,7 @@ LocalErrorHandler:
         Dim client As New TcpClient()
         While True
             If client.Check() Then
-                ' todo
-                Console.WriteLine("!!!")
+                cmdRun_Click(cmdRun, New System.EventArgs)
             End If
         End While
     End Sub
