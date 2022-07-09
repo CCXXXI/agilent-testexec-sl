@@ -3,10 +3,11 @@ Imports System.Text
 
 Public Class TcpClient
     ReadOnly _tcpClient As New System.Net.Sockets.TcpClient()
-    ReadOnly _networkStream As NetworkStream = _tcpClient.GetStream()
+    ReadOnly _networkStream As NetworkStream
 
     Public Sub New()
         _tcpClient.Connect("127.0.0.1", 8000)
+        _networkStream = _tcpClient.GetStream()
     End Sub
 
     Public Function Check() As Boolean
