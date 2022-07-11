@@ -2101,6 +2101,7 @@ LocalErrorHandler:
             FixBox.BackColor = IIf(_client.Report(), Color.Red, Color.Yellow)
         End If
         InitSerialInput()
+        _pause.Set()
         Exit Sub
 
 LocalErrorHandler:
@@ -2315,9 +2316,9 @@ LocalErrorHandler:
             cmdLoadTestplan.Focus()
         End If
 
-        Dim thread As New Thread(AddressOf BackgroundThread)
-        thread.Start()
+        _thread.Start()
     End Sub
+    ReadOnly _thread As New Thread(AddressOf BackgroundThread)
 
     Private Sub InitSerialInput()
         ' Set focus to the input box and clear it
@@ -2326,6 +2327,7 @@ LocalErrorHandler:
     End Sub
 
     ReadOnly _client As New TcpClient()
+    Dim _pause As New Threading.AutoResetEvent(False)
     Private Sub BackgroundThread()
         If Not _client.Connect() Then
             Return
@@ -2338,6 +2340,7 @@ LocalErrorHandler:
                 Invoke(Sub()
                            cmdRun_Click(cmdRun, New System.EventArgs)
                        End Sub)
+                _pause.WaitOne()
             End If
             Thread.Sleep(500)
         End While
