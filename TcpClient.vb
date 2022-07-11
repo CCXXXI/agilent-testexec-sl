@@ -2,7 +2,7 @@
 
 Public Class TcpClient
     Const Host As String = "localhost"
-    Const Port As Integer = 10000
+    Const Port As Integer = 8000
     ReadOnly _readCmd As Byte() = New Byte() {&HFE, &H2, &H0, &H0, &H0, &H8, &H6D, &HC3}
     Const YesCode As Byte = &H1
 
