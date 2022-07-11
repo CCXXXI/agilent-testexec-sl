@@ -1760,6 +1760,7 @@ LocalErrorHandler:
         lblSerialNumber.Enabled = True
         txtSerialNumber.Enabled = True
         txtSerialNumber.BackColor = System.Drawing.Color.White
+        InitSerialInput()
 
         'change the active test name to nothing
         staDescriptions.Panels(iCURRENTTESTNAME).Text = txslFormatString1(LangLookup(modLocalization.txslLangIndex.gnTest1Param), "")
@@ -2258,6 +2259,12 @@ LocalErrorHandler:
 
         Dim thread As New Thread(AddressOf BackgroundThread)
         thread.Start()
+    End Sub
+
+    Private Sub InitSerialInput()
+        ' Set focus to the input box and clear it
+        txtSerialNumber.Focus()
+        txtSerialNumber.Text = ""
     End Sub
 
     Private Sub BackgroundThread()
