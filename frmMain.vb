@@ -82,6 +82,10 @@ Friend Class frmMain
     Friend WithEvents txtExecutionMode As System.Windows.Forms.Label
     Friend WithEvents lblExecutionMode As System.Windows.Forms.Label
     Public WithEvents lblBarCode As System.Windows.Forms.Label
+    Friend WithEvents SysBox As System.Windows.Forms.PictureBox
+    Friend WithEvents SysLabel As System.Windows.Forms.Label
+    Friend WithEvents FixLabel As System.Windows.Forms.Label
+    Friend WithEvents FixBox As System.Windows.Forms.PictureBox
     Friend WithEvents sbpCurrentTestName As System.Windows.Forms.StatusBarPanel
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -104,6 +108,7 @@ Friend Class frmMain
         Me.fraTestplanConfiguration = New System.Windows.Forms.GroupBox()
         Me.fraTxSLConfiguration = New System.Windows.Forms.GroupBox()
         Me.medBarCode = New AxMSMask.AxMaskEdBox()
+        Me.lblBarCode = New System.Windows.Forms.Label()
         Me.fraReport = New System.Windows.Forms.GroupBox()
         Me.rtbReport = New System.Windows.Forms.RichTextBox()
         Me.fraOperatorMessage = New System.Windows.Forms.GroupBox()
@@ -130,7 +135,10 @@ Friend Class frmMain
         Me.sbpYield = New System.Windows.Forms.StatusBarPanel()
         Me.sbpSince = New System.Windows.Forms.StatusBarPanel()
         Me.TestExecSL1 = New AxHPTestExecSL.AxTestExecSL()
-        Me.lblBarCode = New System.Windows.Forms.Label()
+        Me.SysBox = New System.Windows.Forms.PictureBox()
+        Me.SysLabel = New System.Windows.Forms.Label()
+        Me.FixLabel = New System.Windows.Forms.Label()
+        Me.FixBox = New System.Windows.Forms.PictureBox()
         CType(Me.imglogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.fraTestplanConfiguration.SuspendLayout()
         Me.fraTxSLConfiguration.SuspendLayout()
@@ -150,6 +158,8 @@ Friend Class frmMain
         CType(Me.sbpYield, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sbpSince, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SysBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FixBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chkReportPassedTests
@@ -406,6 +416,22 @@ Friend Class frmMain
         Me.medBarCode.Size = New System.Drawing.Size(33, 10)
         Me.medBarCode.TabIndex = 4
         Me.medBarCode.Visible = False
+        '
+        'lblBarCode
+        '
+        Me.lblBarCode.BackColor = System.Drawing.SystemColors.Control
+        Me.lblBarCode.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblBarCode.Enabled = False
+        Me.lblBarCode.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBarCode.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblBarCode.Location = New System.Drawing.Point(4, 69)
+        Me.lblBarCode.Name = "lblBarCode"
+        Me.lblBarCode.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblBarCode.Size = New System.Drawing.Size(123, 19)
+        Me.lblBarCode.TabIndex = 25
+        Me.lblBarCode.Text = "Bar Code"
+        Me.lblBarCode.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblBarCode.Visible = False
         '
         'fraReport
         '
@@ -680,27 +706,51 @@ Friend Class frmMain
         Me.TestExecSL1.TabIndex = 24
         Me.TestExecSL1.Visible = False
         '
-        'lblBarCode
+        'SysBox
         '
-        Me.lblBarCode.BackColor = System.Drawing.SystemColors.Control
-        Me.lblBarCode.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lblBarCode.Enabled = False
-        Me.lblBarCode.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBarCode.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblBarCode.Location = New System.Drawing.Point(4, 69)
-        Me.lblBarCode.Name = "lblBarCode"
-        Me.lblBarCode.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblBarCode.Size = New System.Drawing.Size(123, 19)
-        Me.lblBarCode.TabIndex = 25
-        Me.lblBarCode.Text = "Bar Code"
-        Me.lblBarCode.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.lblBarCode.Visible = False
+        Me.SysBox.BackColor = System.Drawing.Color.Red
+        Me.SysBox.Location = New System.Drawing.Point(512, 15)
+        Me.SysBox.Name = "SysBox"
+        Me.SysBox.Size = New System.Drawing.Size(31, 29)
+        Me.SysBox.TabIndex = 34
+        Me.SysBox.TabStop = False
+        '
+        'SysLabel
+        '
+        Me.SysLabel.AutoSize = True
+        Me.SysLabel.Location = New System.Drawing.Point(481, 21)
+        Me.SysLabel.Name = "SysLabel"
+        Me.SysLabel.Size = New System.Drawing.Size(25, 14)
+        Me.SysLabel.TabIndex = 35
+        Me.SysLabel.Text = "sys"
+        '
+        'FixLabel
+        '
+        Me.FixLabel.AutoSize = True
+        Me.FixLabel.Location = New System.Drawing.Point(591, 23)
+        Me.FixLabel.Name = "FixLabel"
+        Me.FixLabel.Size = New System.Drawing.Size(19, 14)
+        Me.FixLabel.TabIndex = 37
+        Me.FixLabel.Text = "fix"
+        '
+        'FixBox
+        '
+        Me.FixBox.BackColor = System.Drawing.Color.Red
+        Me.FixBox.Location = New System.Drawing.Point(622, 17)
+        Me.FixBox.Name = "FixBox"
+        Me.FixBox.Size = New System.Drawing.Size(31, 29)
+        Me.FixBox.TabIndex = 36
+        Me.FixBox.TabStop = False
         '
         'frmMain
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(758, 552)
+        Me.Controls.Add(Me.FixLabel)
+        Me.Controls.Add(Me.FixBox)
+        Me.Controls.Add(Me.SysLabel)
+        Me.Controls.Add(Me.SysBox)
         Me.Controls.Add(Me.staStats)
         Me.Controls.Add(Me.staDescriptions)
         Me.Controls.Add(Me.fraTestplanConfiguration)
@@ -742,7 +792,10 @@ Friend Class frmMain
         CType(Me.sbpYield, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sbpSince, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SysBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FixBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 #End Region
