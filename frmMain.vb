@@ -228,7 +228,7 @@ Friend Class frmMain
         Me.cmdSelectVariant.Location = New System.Drawing.Point(189, 25)
         Me.cmdSelectVariant.Name = "cmdSelectVariant"
         Me.cmdSelectVariant.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdSelectVariant.Size = New System.Drawing.Size(73, 33)
+        Me.cmdSelectVariant.Size = New System.Drawing.Size(163, 33)
         Me.cmdSelectVariant.TabIndex = 2
         Me.cmdSelectVariant.Text = "Select &Variant..."
         Me.ToolTip1.SetToolTip(Me.cmdSelectVariant, "Selects a new testplan variant.")
@@ -241,10 +241,10 @@ Friend Class frmMain
         Me.cmdLoadTestplan.Enabled = False
         Me.cmdLoadTestplan.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdLoadTestplan.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmdLoadTestplan.Location = New System.Drawing.Point(96, 25)
+        Me.cmdLoadTestplan.Location = New System.Drawing.Point(8, 25)
         Me.cmdLoadTestplan.Name = "cmdLoadTestplan"
         Me.cmdLoadTestplan.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdLoadTestplan.Size = New System.Drawing.Size(73, 33)
+        Me.cmdLoadTestplan.Size = New System.Drawing.Size(161, 33)
         Me.cmdLoadTestplan.TabIndex = 1
         Me.cmdLoadTestplan.Text = "&Load Testplan..."
         Me.ToolTip1.SetToolTip(Me.cmdLoadTestplan, "Loads a new testplan")
