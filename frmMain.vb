@@ -2330,10 +2330,12 @@ LocalErrorHandler:
 
         While True
             If client.Check() Then
+                FixBox.BackColor = Color.Green
                 Invoke(Sub()
                            cmdRun_Click(cmdRun, New System.EventArgs)
                        End Sub)
             End If
+            Thread.Sleep(500)
         End While
     End Sub
 
