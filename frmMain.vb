@@ -47,7 +47,6 @@ Friend Class frmMain
     Public WithEvents cmdTxSLExit As System.Windows.Forms.Button
     Public WithEvents cmdLogin As System.Windows.Forms.Button
     Public WithEvents medBarCode As AxMSMask.AxMaskEdBox
-    Public WithEvents lblBarCode As System.Windows.Forms.Label
     Public WithEvents fraTxSLConfiguration As System.Windows.Forms.GroupBox
     Public WithEvents fraReport As System.Windows.Forms.GroupBox
     Public WithEvents fraOperatorMessage As System.Windows.Forms.GroupBox
@@ -82,6 +81,7 @@ Friend Class frmMain
     Friend WithEvents sbpVariant As System.Windows.Forms.StatusBarPanel
     Friend WithEvents txtExecutionMode As System.Windows.Forms.Label
     Friend WithEvents lblExecutionMode As System.Windows.Forms.Label
+    Public WithEvents lblBarCode As System.Windows.Forms.Label
     Friend WithEvents sbpCurrentTestName As System.Windows.Forms.StatusBarPanel
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -104,7 +104,6 @@ Friend Class frmMain
         Me.fraTestplanConfiguration = New System.Windows.Forms.GroupBox()
         Me.fraTxSLConfiguration = New System.Windows.Forms.GroupBox()
         Me.medBarCode = New AxMSMask.AxMaskEdBox()
-        Me.lblBarCode = New System.Windows.Forms.Label()
         Me.fraReport = New System.Windows.Forms.GroupBox()
         Me.rtbReport = New System.Windows.Forms.RichTextBox()
         Me.fraOperatorMessage = New System.Windows.Forms.GroupBox()
@@ -131,6 +130,7 @@ Friend Class frmMain
         Me.sbpYield = New System.Windows.Forms.StatusBarPanel()
         Me.sbpSince = New System.Windows.Forms.StatusBarPanel()
         Me.TestExecSL1 = New AxHPTestExecSL.AxTestExecSL()
+        Me.lblBarCode = New System.Windows.Forms.Label()
         CType(Me.imglogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.fraTestplanConfiguration.SuspendLayout()
         Me.fraTxSLConfiguration.SuspendLayout()
@@ -228,7 +228,7 @@ Friend Class frmMain
         Me.cmdSelectVariant.Location = New System.Drawing.Point(189, 25)
         Me.cmdSelectVariant.Name = "cmdSelectVariant"
         Me.cmdSelectVariant.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdSelectVariant.Size = New System.Drawing.Size(163, 33)
+        Me.cmdSelectVariant.Size = New System.Drawing.Size(163, 63)
         Me.cmdSelectVariant.TabIndex = 2
         Me.cmdSelectVariant.Text = "Select &Variant..."
         Me.ToolTip1.SetToolTip(Me.cmdSelectVariant, "Selects a new testplan variant.")
@@ -244,7 +244,7 @@ Friend Class frmMain
         Me.cmdLoadTestplan.Location = New System.Drawing.Point(8, 25)
         Me.cmdLoadTestplan.Name = "cmdLoadTestplan"
         Me.cmdLoadTestplan.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdLoadTestplan.Size = New System.Drawing.Size(161, 33)
+        Me.cmdLoadTestplan.Size = New System.Drawing.Size(161, 63)
         Me.cmdLoadTestplan.TabIndex = 1
         Me.cmdLoadTestplan.Text = "&Load Testplan..."
         Me.ToolTip1.SetToolTip(Me.cmdLoadTestplan, "Loads a new testplan")
@@ -400,28 +400,12 @@ Friend Class frmMain
         '
         'medBarCode
         '
-        Me.medBarCode.Location = New System.Drawing.Point(149, 67)
+        Me.medBarCode.Location = New System.Drawing.Point(297, 67)
         Me.medBarCode.Name = "medBarCode"
         Me.medBarCode.OcxState = CType(resources.GetObject("medBarCode.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.medBarCode.Size = New System.Drawing.Size(181, 19)
+        Me.medBarCode.Size = New System.Drawing.Size(33, 10)
         Me.medBarCode.TabIndex = 4
         Me.medBarCode.Visible = False
-        '
-        'lblBarCode
-        '
-        Me.lblBarCode.BackColor = System.Drawing.SystemColors.Control
-        Me.lblBarCode.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lblBarCode.Enabled = False
-        Me.lblBarCode.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBarCode.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblBarCode.Location = New System.Drawing.Point(4, 69)
-        Me.lblBarCode.Name = "lblBarCode"
-        Me.lblBarCode.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblBarCode.Size = New System.Drawing.Size(123, 19)
-        Me.lblBarCode.TabIndex = 25
-        Me.lblBarCode.Text = "Bar Code"
-        Me.lblBarCode.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.lblBarCode.Visible = False
         '
         'fraReport
         '
@@ -695,6 +679,22 @@ Friend Class frmMain
         Me.TestExecSL1.Size = New System.Drawing.Size(40, 40)
         Me.TestExecSL1.TabIndex = 24
         Me.TestExecSL1.Visible = False
+        '
+        'lblBarCode
+        '
+        Me.lblBarCode.BackColor = System.Drawing.SystemColors.Control
+        Me.lblBarCode.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblBarCode.Enabled = False
+        Me.lblBarCode.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBarCode.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblBarCode.Location = New System.Drawing.Point(4, 69)
+        Me.lblBarCode.Name = "lblBarCode"
+        Me.lblBarCode.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblBarCode.Size = New System.Drawing.Size(123, 19)
+        Me.lblBarCode.TabIndex = 25
+        Me.lblBarCode.Text = "Bar Code"
+        Me.lblBarCode.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblBarCode.Visible = False
         '
         'frmMain
         '
