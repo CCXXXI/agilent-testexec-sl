@@ -2326,6 +2326,7 @@ LocalErrorHandler:
         If Not client.Connect() Then
             Return
         End If
+        SysBox.BackColor = Color.Green
 
         While True
             If client.Check() Then
