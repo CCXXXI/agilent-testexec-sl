@@ -159,10 +159,10 @@ Friend Class frmMain
         Me.chkReportPassedTests.Enabled = False
         Me.chkReportPassedTests.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkReportPassedTests.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkReportPassedTests.Location = New System.Drawing.Point(17, 22)
+        Me.chkReportPassedTests.Location = New System.Drawing.Point(14, 18)
         Me.chkReportPassedTests.Name = "chkReportPassedTests"
         Me.chkReportPassedTests.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.chkReportPassedTests.Size = New System.Drawing.Size(227, 25)
+        Me.chkReportPassedTests.Size = New System.Drawing.Size(189, 20)
         Me.chkReportPassedTests.TabIndex = 9
         Me.chkReportPassedTests.Text = "Report &Passed Tests"
         Me.ToolTip1.SetToolTip(Me.chkReportPassedTests, "Show passing tests in the report.")
@@ -175,10 +175,10 @@ Friend Class frmMain
         Me.chkReportFailedTests.Enabled = False
         Me.chkReportFailedTests.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkReportFailedTests.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkReportFailedTests.Location = New System.Drawing.Point(256, 22)
+        Me.chkReportFailedTests.Location = New System.Drawing.Point(213, 18)
         Me.chkReportFailedTests.Name = "chkReportFailedTests"
         Me.chkReportFailedTests.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.chkReportFailedTests.Size = New System.Drawing.Size(166, 25)
+        Me.chkReportFailedTests.Size = New System.Drawing.Size(139, 20)
         Me.chkReportFailedTests.TabIndex = 10
         Me.chkReportFailedTests.Text = "Report &Failed Tests"
         Me.ToolTip1.SetToolTip(Me.chkReportFailedTests, "Show failing tests in the report.")
@@ -191,10 +191,10 @@ Friend Class frmMain
         Me.chkReportException.Enabled = False
         Me.chkReportException.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkReportException.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkReportException.Location = New System.Drawing.Point(17, 50)
+        Me.chkReportException.Location = New System.Drawing.Point(14, 41)
         Me.chkReportException.Name = "chkReportException"
         Me.chkReportException.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.chkReportException.Size = New System.Drawing.Size(225, 25)
+        Me.chkReportException.Size = New System.Drawing.Size(188, 20)
         Me.chkReportException.TabIndex = 11
         Me.chkReportException.Text = "Report &Exceptions"
         Me.ToolTip1.SetToolTip(Me.chkReportException, "Show unhandled exceptions in the report.")
@@ -209,10 +209,10 @@ Friend Class frmMain
         Me.chkShowReport.Enabled = False
         Me.chkShowReport.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkShowReport.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkShowReport.Location = New System.Drawing.Point(256, 50)
+        Me.chkShowReport.Location = New System.Drawing.Point(213, 41)
         Me.chkShowReport.Name = "chkShowReport"
         Me.chkShowReport.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.chkShowReport.Size = New System.Drawing.Size(166, 25)
+        Me.chkShowReport.Size = New System.Drawing.Size(139, 20)
         Me.chkShowReport.TabIndex = 12
         Me.chkShowReport.Text = "Sho&w Report"
         Me.ToolTip1.SetToolTip(Me.chkShowReport, "Show the report.")
@@ -225,10 +225,10 @@ Friend Class frmMain
         Me.cmdSelectVariant.Enabled = False
         Me.cmdSelectVariant.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdSelectVariant.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmdSelectVariant.Location = New System.Drawing.Point(227, 31)
+        Me.cmdSelectVariant.Location = New System.Drawing.Point(189, 25)
         Me.cmdSelectVariant.Name = "cmdSelectVariant"
         Me.cmdSelectVariant.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdSelectVariant.Size = New System.Drawing.Size(87, 40)
+        Me.cmdSelectVariant.Size = New System.Drawing.Size(73, 33)
         Me.cmdSelectVariant.TabIndex = 2
         Me.cmdSelectVariant.Text = "Select &Variant..."
         Me.ToolTip1.SetToolTip(Me.cmdSelectVariant, "Selects a new testplan variant.")
@@ -241,10 +241,10 @@ Friend Class frmMain
         Me.cmdLoadTestplan.Enabled = False
         Me.cmdLoadTestplan.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdLoadTestplan.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmdLoadTestplan.Location = New System.Drawing.Point(115, 31)
+        Me.cmdLoadTestplan.Location = New System.Drawing.Point(96, 25)
         Me.cmdLoadTestplan.Name = "cmdLoadTestplan"
         Me.cmdLoadTestplan.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdLoadTestplan.Size = New System.Drawing.Size(88, 40)
+        Me.cmdLoadTestplan.Size = New System.Drawing.Size(73, 33)
         Me.cmdLoadTestplan.TabIndex = 1
         Me.cmdLoadTestplan.Text = "&Load Testplan..."
         Me.ToolTip1.SetToolTip(Me.cmdLoadTestplan, "Loads a new testplan")
@@ -256,10 +256,10 @@ Friend Class frmMain
         Me.cmdTxSLExit.Cursor = System.Windows.Forms.Cursors.Default
         Me.cmdTxSLExit.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdTxSLExit.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmdTxSLExit.Location = New System.Drawing.Point(335, 31)
+        Me.cmdTxSLExit.Location = New System.Drawing.Point(279, 25)
         Me.cmdTxSLExit.Name = "cmdTxSLExit"
         Me.cmdTxSLExit.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdTxSLExit.Size = New System.Drawing.Size(87, 40)
+        Me.cmdTxSLExit.Size = New System.Drawing.Size(73, 33)
         Me.cmdTxSLExit.TabIndex = 3
         Me.cmdTxSLExit.Text = "E&xit"
         Me.ToolTip1.SetToolTip(Me.cmdTxSLExit, "Exits the application.")
@@ -271,10 +271,10 @@ Friend Class frmMain
         Me.cmdLogin.Cursor = System.Windows.Forms.Cursors.Default
         Me.cmdLogin.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdLogin.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmdLogin.Location = New System.Drawing.Point(10, 31)
+        Me.cmdLogin.Location = New System.Drawing.Point(8, 25)
         Me.cmdLogin.Name = "cmdLogin"
         Me.cmdLogin.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdLogin.Size = New System.Drawing.Size(87, 40)
+        Me.cmdLogin.Size = New System.Drawing.Size(73, 33)
         Me.cmdLogin.TabIndex = 0
         Me.cmdLogin.Text = "Lo&gin"
         Me.ToolTip1.SetToolTip(Me.cmdLogin, "Login a new operator")
@@ -288,11 +288,11 @@ Friend Class frmMain
         Me.txtSerialNumber.Enabled = False
         Me.txtSerialNumber.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSerialNumber.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtSerialNumber.Location = New System.Drawing.Point(182, 21)
+        Me.txtSerialNumber.Location = New System.Drawing.Point(152, 17)
         Me.txtSerialNumber.MaxLength = 0
         Me.txtSerialNumber.Name = "txtSerialNumber"
         Me.txtSerialNumber.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtSerialNumber.Size = New System.Drawing.Size(218, 23)
+        Me.txtSerialNumber.Size = New System.Drawing.Size(181, 20)
         Me.txtSerialNumber.TabIndex = 5
         Me.ToolTip1.SetToolTip(Me.txtSerialNumber, "The serial number of the UUT is entered, and shown, here.")
         '
@@ -303,10 +303,10 @@ Friend Class frmMain
         Me.cmdRun.Enabled = False
         Me.cmdRun.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdRun.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmdRun.Location = New System.Drawing.Point(29, 76)
+        Me.cmdRun.Location = New System.Drawing.Point(24, 62)
         Me.cmdRun.Name = "cmdRun"
         Me.cmdRun.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdRun.Size = New System.Drawing.Size(87, 61)
+        Me.cmdRun.Size = New System.Drawing.Size(73, 49)
         Me.cmdRun.TabIndex = 6
         Me.cmdRun.Text = "&Run"
         Me.ToolTip1.SetToolTip(Me.cmdRun, "Runs or continues the testplan")
@@ -319,10 +319,10 @@ Friend Class frmMain
         Me.cmdStop.Enabled = False
         Me.cmdStop.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdStop.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmdStop.Location = New System.Drawing.Point(164, 76)
+        Me.cmdStop.Location = New System.Drawing.Point(137, 62)
         Me.cmdStop.Name = "cmdStop"
         Me.cmdStop.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdStop.Size = New System.Drawing.Size(88, 61)
+        Me.cmdStop.Size = New System.Drawing.Size(73, 49)
         Me.cmdStop.TabIndex = 7
         Me.cmdStop.Text = "&Stop"
         Me.ToolTip1.SetToolTip(Me.cmdStop, "Stops the testplan at the first opportunity, and executes clean up actions")
@@ -335,10 +335,10 @@ Friend Class frmMain
         Me.cmdAbort.Enabled = False
         Me.cmdAbort.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdAbort.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmdAbort.Location = New System.Drawing.Point(298, 76)
+        Me.cmdAbort.Location = New System.Drawing.Point(248, 62)
         Me.cmdAbort.Name = "cmdAbort"
         Me.cmdAbort.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdAbort.Size = New System.Drawing.Size(87, 61)
+        Me.cmdAbort.Size = New System.Drawing.Size(73, 49)
         Me.cmdAbort.TabIndex = 8
         Me.cmdAbort.Text = "&Abort"
         Me.ToolTip1.SetToolTip(Me.cmdAbort, "Aborts the tesplan immediately, and does NOT perform cleanup actions")
@@ -348,9 +348,9 @@ Friend Class frmMain
         '
         Me.imglogo.Cursor = System.Windows.Forms.Cursors.Default
         Me.imglogo.Image = CType(resources.GetObject("imglogo.Image"), System.Drawing.Image)
-        Me.imglogo.Location = New System.Drawing.Point(19, 10)
+        Me.imglogo.Location = New System.Drawing.Point(16, 8)
         Me.imglogo.Name = "imglogo"
-        Me.imglogo.Size = New System.Drawing.Size(43, 44)
+        Me.imglogo.Size = New System.Drawing.Size(36, 36)
         Me.imglogo.TabIndex = 30
         Me.imglogo.TabStop = False
         Me.ToolTip1.SetToolTip(Me.imglogo, "Replace this image with one of your chosing")
@@ -369,10 +369,10 @@ Friend Class frmMain
         Me.fraTestplanConfiguration.Enabled = False
         Me.fraTestplanConfiguration.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fraTestplanConfiguration.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fraTestplanConfiguration.Location = New System.Drawing.Point(13, 400)
+        Me.fraTestplanConfiguration.Location = New System.Drawing.Point(11, 325)
         Me.fraTestplanConfiguration.Name = "fraTestplanConfiguration"
         Me.fraTestplanConfiguration.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.fraTestplanConfiguration.Size = New System.Drawing.Size(432, 85)
+        Me.fraTestplanConfiguration.Size = New System.Drawing.Size(360, 69)
         Me.fraTestplanConfiguration.TabIndex = 22
         Me.fraTestplanConfiguration.TabStop = False
         Me.fraTestplanConfiguration.Text = "Testplan Configuration"
@@ -388,20 +388,20 @@ Friend Class frmMain
         Me.fraTxSLConfiguration.Controls.Add(Me.lblBarCode)
         Me.fraTxSLConfiguration.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fraTxSLConfiguration.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fraTxSLConfiguration.Location = New System.Drawing.Point(13, 492)
+        Me.fraTxSLConfiguration.Location = New System.Drawing.Point(11, 400)
         Me.fraTxSLConfiguration.Name = "fraTxSLConfiguration"
         Me.fraTxSLConfiguration.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.fraTxSLConfiguration.Size = New System.Drawing.Size(433, 120)
+        Me.fraTxSLConfiguration.Size = New System.Drawing.Size(361, 97)
         Me.fraTxSLConfiguration.TabIndex = 20
         Me.fraTxSLConfiguration.TabStop = False
         Me.fraTxSLConfiguration.Text = "TxSL Configuration"
         '
         'medBarCode
         '
-        Me.medBarCode.Location = New System.Drawing.Point(179, 82)
+        Me.medBarCode.Location = New System.Drawing.Point(149, 67)
         Me.medBarCode.Name = "medBarCode"
         Me.medBarCode.OcxState = CType(resources.GetObject("medBarCode.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.medBarCode.Size = New System.Drawing.Size(217, 24)
+        Me.medBarCode.Size = New System.Drawing.Size(181, 19)
         Me.medBarCode.TabIndex = 4
         '
         'lblBarCode
@@ -411,10 +411,10 @@ Friend Class frmMain
         Me.lblBarCode.Enabled = False
         Me.lblBarCode.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBarCode.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblBarCode.Location = New System.Drawing.Point(5, 85)
+        Me.lblBarCode.Location = New System.Drawing.Point(4, 69)
         Me.lblBarCode.Name = "lblBarCode"
         Me.lblBarCode.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblBarCode.Size = New System.Drawing.Size(147, 23)
+        Me.lblBarCode.Size = New System.Drawing.Size(123, 19)
         Me.lblBarCode.TabIndex = 25
         Me.lblBarCode.Text = "Bar Code"
         Me.lblBarCode.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -425,10 +425,10 @@ Friend Class frmMain
         Me.fraReport.Controls.Add(Me.rtbReport)
         Me.fraReport.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fraReport.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fraReport.Location = New System.Drawing.Point(461, 167)
+        Me.fraReport.Location = New System.Drawing.Point(384, 136)
         Me.fraReport.Name = "fraReport"
         Me.fraReport.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.fraReport.Size = New System.Drawing.Size(433, 445)
+        Me.fraReport.Size = New System.Drawing.Size(361, 361)
         Me.fraReport.TabIndex = 19
         Me.fraReport.TabStop = False
         Me.fraReport.Text = "Report"
@@ -436,11 +436,11 @@ Friend Class frmMain
         'rtbReport
         '
         Me.rtbReport.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbReport.Location = New System.Drawing.Point(10, 20)
+        Me.rtbReport.Location = New System.Drawing.Point(8, 16)
         Me.rtbReport.MaxLength = 10000
         Me.rtbReport.Name = "rtbReport"
         Me.rtbReport.ReadOnly = True
-        Me.rtbReport.Size = New System.Drawing.Size(412, 413)
+        Me.rtbReport.Size = New System.Drawing.Size(344, 336)
         Me.rtbReport.TabIndex = 0
         Me.rtbReport.Text = ""
         '
@@ -452,10 +452,10 @@ Friend Class frmMain
         Me.fraOperatorMessage.Enabled = False
         Me.fraOperatorMessage.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fraOperatorMessage.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fraOperatorMessage.Location = New System.Drawing.Point(461, 54)
+        Me.fraOperatorMessage.Location = New System.Drawing.Point(384, 44)
         Me.fraOperatorMessage.Name = "fraOperatorMessage"
         Me.fraOperatorMessage.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.fraOperatorMessage.Size = New System.Drawing.Size(433, 110)
+        Me.fraOperatorMessage.Size = New System.Drawing.Size(361, 89)
         Me.fraOperatorMessage.TabIndex = 17
         Me.fraOperatorMessage.TabStop = False
         Me.fraOperatorMessage.Text = "Operator Messages"
@@ -464,10 +464,10 @@ Friend Class frmMain
         '
         Me.rtbViewErrors.BackColor = System.Drawing.Color.Red
         Me.rtbViewErrors.Font = New System.Drawing.Font("MS Reference Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbViewErrors.Location = New System.Drawing.Point(86, 39)
+        Me.rtbViewErrors.Location = New System.Drawing.Point(72, 32)
         Me.rtbViewErrors.Name = "rtbViewErrors"
         Me.rtbViewErrors.ReadOnly = True
-        Me.rtbViewErrors.Size = New System.Drawing.Size(212, 50)
+        Me.rtbViewErrors.Size = New System.Drawing.Size(176, 40)
         Me.rtbViewErrors.TabIndex = 31
         Me.rtbViewErrors.Text = ""
         Me.rtbViewErrors.Visible = False
@@ -475,10 +475,10 @@ Friend Class frmMain
         'rtbOperatorMessage
         '
         Me.rtbOperatorMessage.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbOperatorMessage.Location = New System.Drawing.Point(10, 20)
+        Me.rtbOperatorMessage.Location = New System.Drawing.Point(8, 16)
         Me.rtbOperatorMessage.Name = "rtbOperatorMessage"
         Me.rtbOperatorMessage.ReadOnly = True
-        Me.rtbOperatorMessage.Size = New System.Drawing.Size(412, 78)
+        Me.rtbOperatorMessage.Size = New System.Drawing.Size(344, 64)
         Me.rtbOperatorMessage.TabIndex = 31
         Me.rtbOperatorMessage.Text = ""
         '
@@ -488,19 +488,19 @@ Friend Class frmMain
         Me.fraTestplanProgress.Controls.Add(Me.prbTestplan)
         Me.fraTestplanProgress.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fraTestplanProgress.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fraTestplanProgress.Location = New System.Drawing.Point(13, 167)
+        Me.fraTestplanProgress.Location = New System.Drawing.Point(11, 136)
         Me.fraTestplanProgress.Name = "fraTestplanProgress"
         Me.fraTestplanProgress.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.fraTestplanProgress.Size = New System.Drawing.Size(433, 71)
+        Me.fraTestplanProgress.Size = New System.Drawing.Size(361, 57)
         Me.fraTestplanProgress.TabIndex = 16
         Me.fraTestplanProgress.TabStop = False
         Me.fraTestplanProgress.Text = "Testplan Progress"
         '
         'prbTestplan
         '
-        Me.prbTestplan.Location = New System.Drawing.Point(10, 30)
+        Me.prbTestplan.Location = New System.Drawing.Point(8, 24)
         Me.prbTestplan.Name = "prbTestplan"
-        Me.prbTestplan.Size = New System.Drawing.Size(412, 29)
+        Me.prbTestplan.Size = New System.Drawing.Size(344, 24)
         Me.prbTestplan.TabIndex = 31
         '
         'fraExecution
@@ -515,10 +515,10 @@ Friend Class frmMain
         Me.fraExecution.Controls.Add(Me.lblSerialNumber)
         Me.fraExecution.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fraExecution.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fraExecution.Location = New System.Drawing.Point(13, 246)
+        Me.fraExecution.Location = New System.Drawing.Point(11, 200)
         Me.fraExecution.Name = "fraExecution"
         Me.fraExecution.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.fraExecution.Size = New System.Drawing.Size(433, 147)
+        Me.fraExecution.Size = New System.Drawing.Size(361, 119)
         Me.fraExecution.TabIndex = 15
         Me.fraExecution.TabStop = False
         Me.fraExecution.Text = "Testplan Execution"
@@ -526,17 +526,17 @@ Friend Class frmMain
         'txtExecutionMode
         '
         Me.txtExecutionMode.AutoSize = True
-        Me.txtExecutionMode.Location = New System.Drawing.Point(182, 50)
+        Me.txtExecutionMode.Location = New System.Drawing.Point(152, 41)
         Me.txtExecutionMode.Name = "txtExecutionMode"
-        Me.txtExecutionMode.Size = New System.Drawing.Size(0, 16)
+        Me.txtExecutionMode.Size = New System.Drawing.Size(0, 14)
         Me.txtExecutionMode.TabIndex = 25
         '
         'lblExecutionMode
         '
         Me.lblExecutionMode.AutoSize = True
-        Me.lblExecutionMode.Location = New System.Drawing.Point(68, 49)
+        Me.lblExecutionMode.Location = New System.Drawing.Point(57, 40)
         Me.lblExecutionMode.Name = "lblExecutionMode"
-        Me.lblExecutionMode.Size = New System.Drawing.Size(112, 16)
+        Me.lblExecutionMode.Size = New System.Drawing.Size(86, 14)
         Me.lblExecutionMode.TabIndex = 24
         Me.lblExecutionMode.Text = "Execution Mode:"
         '
@@ -547,10 +547,10 @@ Friend Class frmMain
         Me.lblSerialNumber.Enabled = False
         Me.lblSerialNumber.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSerialNumber.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblSerialNumber.Location = New System.Drawing.Point(19, 21)
+        Me.lblSerialNumber.Location = New System.Drawing.Point(16, 17)
         Me.lblSerialNumber.Name = "lblSerialNumber"
         Me.lblSerialNumber.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblSerialNumber.Size = New System.Drawing.Size(151, 23)
+        Me.lblSerialNumber.Size = New System.Drawing.Size(126, 19)
         Me.lblSerialNumber.TabIndex = 23
         Me.lblSerialNumber.Text = "Serial Number"
         Me.lblSerialNumber.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -562,10 +562,10 @@ Friend Class frmMain
         Me.fraSystemStatus.Enabled = False
         Me.fraSystemStatus.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fraSystemStatus.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fraSystemStatus.Location = New System.Drawing.Point(13, 54)
+        Me.fraSystemStatus.Location = New System.Drawing.Point(11, 44)
         Me.fraSystemStatus.Name = "fraSystemStatus"
         Me.fraSystemStatus.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.fraSystemStatus.Size = New System.Drawing.Size(433, 110)
+        Me.fraSystemStatus.Size = New System.Drawing.Size(361, 89)
         Me.fraSystemStatus.TabIndex = 13
         Me.fraSystemStatus.TabStop = False
         Me.fraSystemStatus.Text = "System Status"
@@ -573,19 +573,19 @@ Friend Class frmMain
         'rtbSystemStatus
         '
         Me.rtbSystemStatus.Font = New System.Drawing.Font("Tahoma", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbSystemStatus.Location = New System.Drawing.Point(10, 20)
+        Me.rtbSystemStatus.Location = New System.Drawing.Point(8, 16)
         Me.rtbSystemStatus.Name = "rtbSystemStatus"
-        Me.rtbSystemStatus.Size = New System.Drawing.Size(412, 78)
+        Me.rtbSystemStatus.Size = New System.Drawing.Size(344, 64)
         Me.rtbSystemStatus.TabIndex = 0
         Me.rtbSystemStatus.Text = ""
         '
         'TestExecSL1
         '
         Me.TestExecSL1.Enabled = True
-        Me.TestExecSL1.Location = New System.Drawing.Point(455, 7)
+        Me.TestExecSL1.Location = New System.Drawing.Point(379, 6)
         Me.TestExecSL1.Name = "TestExecSL1"
         Me.TestExecSL1.OcxState = CType(resources.GetObject("TestExecSL1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.TestExecSL1.Size = New System.Drawing.Size(48, 50)
+        Me.TestExecSL1.Size = New System.Drawing.Size(40, 40)
         Me.TestExecSL1.TabIndex = 24
         Me.TestExecSL1.Visible = False
         '
@@ -595,20 +595,20 @@ Friend Class frmMain
         Me.lblTitle.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblTitle.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblTitle.Location = New System.Drawing.Point(66, 4)
+        Me.lblTitle.Location = New System.Drawing.Point(55, 3)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblTitle.Size = New System.Drawing.Size(356, 50)
+        Me.lblTitle.Size = New System.Drawing.Size(297, 41)
         Me.lblTitle.TabIndex = 18
         Me.lblTitle.Text = "Agilent TestExec SL"
         '
         'staDescriptions
         '
-        Me.staDescriptions.Location = New System.Drawing.Point(0, 523)
+        Me.staDescriptions.Location = New System.Drawing.Point(0, 529)
         Me.staDescriptions.Name = "staDescriptions"
         Me.staDescriptions.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.sbpUutName, Me.sbpTestplanName, Me.sbpVariant, Me.sbpCurrentTestName})
         Me.staDescriptions.ShowPanels = True
-        Me.staDescriptions.Size = New System.Drawing.Size(758, 29)
+        Me.staDescriptions.Size = New System.Drawing.Size(758, 23)
         Me.staDescriptions.TabIndex = 31
         '
         'sbpUutName
@@ -644,15 +644,15 @@ Friend Class frmMain
         Me.sbpCurrentTestName.Name = "sbpCurrentTestName"
         Me.sbpCurrentTestName.Text = "Test:"
         Me.sbpCurrentTestName.ToolTipText = "Current Test Name"
-        Me.sbpCurrentTestName.Width = 237
+        Me.sbpCurrentTestName.Width = 241
         '
         'staStats
         '
-        Me.staStats.Location = New System.Drawing.Point(0, 493)
+        Me.staStats.Location = New System.Drawing.Point(0, 505)
         Me.staStats.Name = "staStats"
         Me.staStats.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.sbpPassed, Me.sbpFailed, Me.sbpTotal, Me.sbpYield, Me.sbpSince})
         Me.staStats.ShowPanels = True
-        Me.staStats.Size = New System.Drawing.Size(758, 30)
+        Me.staStats.Size = New System.Drawing.Size(758, 24)
         Me.staStats.SizingGrip = False
         Me.staStats.TabIndex = 33
         '
@@ -694,7 +694,7 @@ Friend Class frmMain
         '
         'frmMain
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 16)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(758, 552)
         Me.Controls.Add(Me.staStats)
