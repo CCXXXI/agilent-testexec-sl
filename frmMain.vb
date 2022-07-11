@@ -2258,6 +2258,11 @@ LocalErrorHandler:
 
     Private Sub BackgroundThread()
         Dim client As New TcpClient()
+
+        If Not client.Connect() Then
+            Return
+        End If
+
         While True
             If client.Check() Then
                 Invoke(Sub()
