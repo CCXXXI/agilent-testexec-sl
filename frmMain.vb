@@ -4,67 +4,67 @@ Option Explicit On
 Imports System.Threading
 
 Friend Class frmMain
-	Inherits System.Windows.Forms.Form
+    Inherits System.Windows.Forms.Form
 #Region "Windows Form Designer generated code "
-	Public Sub New()
-		MyBase.New()
-		If m_vb6FormDefInstance Is Nothing Then
-			If m_InitializingDefInstance Then
-				m_vb6FormDefInstance = Me
-			Else
-				Try
-					'For the start-up form, the first instance created is the default instance.
-					If System.Reflection.Assembly.GetExecutingAssembly.EntryPoint.DeclaringType Is Me.GetType Then
-						m_vb6FormDefInstance = Me
-					End If
-				Catch
-				End Try
-			End If
-		End If
-		'This call is required by the Windows Form Designer.
-		InitializeComponent()
-	End Sub
-	'Form overrides dispose to clean up the component list.
-	Protected Overloads Overrides Sub Dispose(ByVal Disposing As Boolean)
-		If Disposing Then
-			If Not components Is Nothing Then
-				components.Dispose()
-			End If
-		End If
-		MyBase.Dispose(Disposing)
-	End Sub
-	'Required by the Windows Form Designer
-	Private components As System.ComponentModel.IContainer
-	Public ToolTip1 As System.Windows.Forms.ToolTip
-	Public WithEvents tmrFailure As System.Windows.Forms.Timer
+    Public Sub New()
+        MyBase.New()
+        If m_vb6FormDefInstance Is Nothing Then
+            If m_InitializingDefInstance Then
+                m_vb6FormDefInstance = Me
+            Else
+                Try
+                    'For the start-up form, the first instance created is the default instance.
+                    If System.Reflection.Assembly.GetExecutingAssembly.EntryPoint.DeclaringType Is Me.GetType Then
+                        m_vb6FormDefInstance = Me
+                    End If
+                Catch
+                End Try
+            End If
+        End If
+        'This call is required by the Windows Form Designer.
+        InitializeComponent()
+    End Sub
+    'Form overrides dispose to clean up the component list.
+    Protected Overloads Overrides Sub Dispose(ByVal Disposing As Boolean)
+        If Disposing Then
+            If Not components Is Nothing Then
+                components.Dispose()
+            End If
+        End If
+        MyBase.Dispose(Disposing)
+    End Sub
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+    Public ToolTip1 As System.Windows.Forms.ToolTip
+    Public WithEvents tmrFailure As System.Windows.Forms.Timer
     Public WithEvents chkReportPassedTests As System.Windows.Forms.CheckBox
-	Public WithEvents chkReportFailedTests As System.Windows.Forms.CheckBox
-	Public WithEvents chkReportException As System.Windows.Forms.CheckBox
-	Public WithEvents chkShowReport As System.Windows.Forms.CheckBox
-	Public WithEvents fraTestplanConfiguration As System.Windows.Forms.GroupBox
-	Public WithEvents cmdSelectVariant As System.Windows.Forms.Button
-	Public WithEvents cmdLoadTestplan As System.Windows.Forms.Button
-	Public WithEvents cmdTxSLExit As System.Windows.Forms.Button
-	Public WithEvents cmdLogin As System.Windows.Forms.Button
-	Public WithEvents medBarCode As AxMSMask.AxMaskEdBox
-	Public WithEvents lblBarCode As System.Windows.Forms.Label
-	Public WithEvents fraTxSLConfiguration As System.Windows.Forms.GroupBox
+    Public WithEvents chkReportFailedTests As System.Windows.Forms.CheckBox
+    Public WithEvents chkReportException As System.Windows.Forms.CheckBox
+    Public WithEvents chkShowReport As System.Windows.Forms.CheckBox
+    Public WithEvents fraTestplanConfiguration As System.Windows.Forms.GroupBox
+    Public WithEvents cmdSelectVariant As System.Windows.Forms.Button
+    Public WithEvents cmdLoadTestplan As System.Windows.Forms.Button
+    Public WithEvents cmdTxSLExit As System.Windows.Forms.Button
+    Public WithEvents cmdLogin As System.Windows.Forms.Button
+    Public WithEvents medBarCode As AxMSMask.AxMaskEdBox
+    Public WithEvents lblBarCode As System.Windows.Forms.Label
+    Public WithEvents fraTxSLConfiguration As System.Windows.Forms.GroupBox
     Public WithEvents fraReport As System.Windows.Forms.GroupBox
     Public WithEvents fraOperatorMessage As System.Windows.Forms.GroupBox
     Public WithEvents fraTestplanProgress As System.Windows.Forms.GroupBox
-	Public WithEvents txtSerialNumber As System.Windows.Forms.TextBox
-	Public WithEvents cmdRun As System.Windows.Forms.Button
-	Public WithEvents cmdStop As System.Windows.Forms.Button
-	Public WithEvents cmdAbort As System.Windows.Forms.Button
-	Public WithEvents lblSerialNumber As System.Windows.Forms.Label
-	Public WithEvents fraExecution As System.Windows.Forms.GroupBox
+    Public WithEvents txtSerialNumber As System.Windows.Forms.TextBox
+    Public WithEvents cmdRun As System.Windows.Forms.Button
+    Public WithEvents cmdStop As System.Windows.Forms.Button
+    Public WithEvents cmdAbort As System.Windows.Forms.Button
+    Public WithEvents lblSerialNumber As System.Windows.Forms.Label
+    Public WithEvents fraExecution As System.Windows.Forms.GroupBox
     Public WithEvents fraSystemStatus As System.Windows.Forms.GroupBox
     Public WithEvents imglogo As System.Windows.Forms.PictureBox
-	Public WithEvents TestExecSL1 As AxHPTestExecSL.AxTestExecSL
-	Public WithEvents lblTitle As System.Windows.Forms.Label
-	'NOTE: The following procedure is required by the Windows Form Designer
-	'It can be modified using the Windows Form Designer.
-	'Do not modify it using the code editor.
+    Public WithEvents TestExecSL1 As AxHPTestExecSL.AxTestExecSL
+    Public WithEvents lblTitle As System.Windows.Forms.Label
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.
+    'Do not modify it using the code editor.
     Friend WithEvents rtbViewErrors As System.Windows.Forms.RichTextBox
     Friend WithEvents rtbOperatorMessage As System.Windows.Forms.RichTextBox
     Friend WithEvents rtbSystemStatus As System.Windows.Forms.RichTextBox
@@ -103,7 +103,6 @@ Friend Class frmMain
         Me.tmrFailure = New System.Windows.Forms.Timer(Me.components)
         Me.fraTestplanConfiguration = New System.Windows.Forms.GroupBox()
         Me.fraTxSLConfiguration = New System.Windows.Forms.GroupBox()
-        Me.medBarCode = New AxMSMask.AxMaskEdBox()
         Me.lblBarCode = New System.Windows.Forms.Label()
         Me.fraReport = New System.Windows.Forms.GroupBox()
         Me.rtbReport = New System.Windows.Forms.RichTextBox()
@@ -118,7 +117,6 @@ Friend Class frmMain
         Me.lblSerialNumber = New System.Windows.Forms.Label()
         Me.fraSystemStatus = New System.Windows.Forms.GroupBox()
         Me.rtbSystemStatus = New System.Windows.Forms.RichTextBox()
-        Me.TestExecSL1 = New AxHPTestExecSL.AxTestExecSL()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.staDescriptions = New System.Windows.Forms.StatusBar()
         Me.sbpUutName = New System.Windows.Forms.StatusBarPanel()
@@ -131,16 +129,16 @@ Friend Class frmMain
         Me.sbpTotal = New System.Windows.Forms.StatusBarPanel()
         Me.sbpYield = New System.Windows.Forms.StatusBarPanel()
         Me.sbpSince = New System.Windows.Forms.StatusBarPanel()
+        Me.medBarCode = New AxMSMask.AxMaskEdBox()
+        Me.TestExecSL1 = New AxHPTestExecSL.AxTestExecSL()
         CType(Me.imglogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.fraTestplanConfiguration.SuspendLayout()
         Me.fraTxSLConfiguration.SuspendLayout()
-        CType(Me.medBarCode, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.fraReport.SuspendLayout()
         Me.fraOperatorMessage.SuspendLayout()
         Me.fraTestplanProgress.SuspendLayout()
         Me.fraExecution.SuspendLayout()
         Me.fraSystemStatus.SuspendLayout()
-        CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sbpUutName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sbpTestplanName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sbpVariant, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -150,6 +148,8 @@ Friend Class frmMain
         CType(Me.sbpTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sbpYield, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sbpSince, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.medBarCode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chkReportPassedTests
@@ -264,6 +264,7 @@ Friend Class frmMain
         Me.cmdTxSLExit.Text = "E&xit"
         Me.ToolTip1.SetToolTip(Me.cmdTxSLExit, "Exits the application.")
         Me.cmdTxSLExit.UseVisualStyleBackColor = False
+        Me.cmdTxSLExit.Visible = False
         '
         'cmdLogin
         '
@@ -279,6 +280,7 @@ Friend Class frmMain
         Me.cmdLogin.Text = "Lo&gin"
         Me.ToolTip1.SetToolTip(Me.cmdLogin, "Login a new operator")
         Me.cmdLogin.UseVisualStyleBackColor = False
+        Me.cmdLogin.Visible = False
         '
         'txtSerialNumber
         '
@@ -395,14 +397,6 @@ Friend Class frmMain
         Me.fraTxSLConfiguration.TabIndex = 20
         Me.fraTxSLConfiguration.TabStop = False
         Me.fraTxSLConfiguration.Text = "TxSL Configuration"
-        '
-        'medBarCode
-        '
-        Me.medBarCode.Location = New System.Drawing.Point(149, 67)
-        Me.medBarCode.Name = "medBarCode"
-        Me.medBarCode.OcxState = CType(resources.GetObject("medBarCode.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.medBarCode.Size = New System.Drawing.Size(181, 19)
-        Me.medBarCode.TabIndex = 4
         '
         'lblBarCode
         '
@@ -579,16 +573,6 @@ Friend Class frmMain
         Me.rtbSystemStatus.TabIndex = 0
         Me.rtbSystemStatus.Text = ""
         '
-        'TestExecSL1
-        '
-        Me.TestExecSL1.Enabled = True
-        Me.TestExecSL1.Location = New System.Drawing.Point(379, 6)
-        Me.TestExecSL1.Name = "TestExecSL1"
-        Me.TestExecSL1.OcxState = CType(resources.GetObject("TestExecSL1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.TestExecSL1.Size = New System.Drawing.Size(40, 40)
-        Me.TestExecSL1.TabIndex = 24
-        Me.TestExecSL1.Visible = False
-        '
         'lblTitle
         '
         Me.lblTitle.BackColor = System.Drawing.SystemColors.Control
@@ -692,6 +676,24 @@ Friend Class frmMain
         Me.sbpSince.ToolTipText = "The date and time of the last reset of this data"
         Me.sbpSince.Width = 358
         '
+        'medBarCode
+        '
+        Me.medBarCode.Location = New System.Drawing.Point(149, 67)
+        Me.medBarCode.Name = "medBarCode"
+        Me.medBarCode.OcxState = CType(resources.GetObject("medBarCode.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.medBarCode.Size = New System.Drawing.Size(181, 19)
+        Me.medBarCode.TabIndex = 4
+        '
+        'TestExecSL1
+        '
+        Me.TestExecSL1.Enabled = True
+        Me.TestExecSL1.Location = New System.Drawing.Point(379, 6)
+        Me.TestExecSL1.Name = "TestExecSL1"
+        Me.TestExecSL1.OcxState = CType(resources.GetObject("TestExecSL1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.TestExecSL1.Size = New System.Drawing.Size(40, 40)
+        Me.TestExecSL1.TabIndex = 24
+        Me.TestExecSL1.Visible = False
+        '
         'frmMain
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
@@ -721,14 +723,12 @@ Friend Class frmMain
         CType(Me.imglogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.fraTestplanConfiguration.ResumeLayout(False)
         Me.fraTxSLConfiguration.ResumeLayout(False)
-        CType(Me.medBarCode, System.ComponentModel.ISupportInitialize).EndInit()
         Me.fraReport.ResumeLayout(False)
         Me.fraOperatorMessage.ResumeLayout(False)
         Me.fraTestplanProgress.ResumeLayout(False)
         Me.fraExecution.ResumeLayout(False)
         Me.fraExecution.PerformLayout()
         Me.fraSystemStatus.ResumeLayout(False)
-        CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sbpUutName, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sbpTestplanName, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sbpVariant, System.ComponentModel.ISupportInitialize).EndInit()
@@ -738,28 +738,30 @@ Friend Class frmMain
         CType(Me.sbpTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sbpYield, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sbpSince, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.medBarCode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 #End Region
 #Region "Upgrade Support "
-	Private Shared m_vb6FormDefInstance As frmMain
-	Private Shared m_InitializingDefInstance As Boolean
-	Public Shared Property DefInstance() As frmMain
-		Get
-			If m_vb6FormDefInstance Is Nothing OrElse m_vb6FormDefInstance.IsDisposed Then
-				m_InitializingDefInstance = True
-				m_vb6FormDefInstance = New frmMain()
-				m_InitializingDefInstance = False
-			End If
-			DefInstance = m_vb6FormDefInstance
-		End Get
-		Set
-			m_vb6FormDefInstance = Value
-		End Set
-	End Property
+    Private Shared m_vb6FormDefInstance As frmMain
+    Private Shared m_InitializingDefInstance As Boolean
+    Public Shared Property DefInstance() As frmMain
+        Get
+            If m_vb6FormDefInstance Is Nothing OrElse m_vb6FormDefInstance.IsDisposed Then
+                m_InitializingDefInstance = True
+                m_vb6FormDefInstance = New frmMain()
+                m_InitializingDefInstance = False
+            End If
+            DefInstance = m_vb6FormDefInstance
+        End Get
+        Set
+            m_vb6FormDefInstance = Value
+        End Set
+    End Property
 #End Region
-	'*****************************************************************************
+    '*****************************************************************************
     'me.frm
     'me.frx
     '
@@ -782,8 +784,8 @@ Friend Class frmMain
     '
     'The frmMain files are the main code for the TypicalOpUI application.
     'The me.frm file contains the TxSL control, and all of the logic
-	'to respond to its many events.  Also included here is the logic to
-	'control the states of the controls (for example, to only enable the
+    'to respond to its many events.  Also included here is the logic to
+    'control the states of the controls (for example, to only enable the
     'Run button when appropriate).  The me.frm file is the core
     'piece of code in the application.  Most of the other forms
     'are called as a result of an event from the TxSL control
@@ -1048,48 +1050,48 @@ LocalErrorHandler:
         On Error GoTo LocalErrorHandler
         LocalSource = ":" & Me.Name & ":cmdRun_Click"
 
-      'Do not proceed if no statement in testplan
-      If (TestExecSL1.Testplan.Statements.Count) Then
+        'Do not proceed if no statement in testplan
+        If (TestExecSL1.Testplan.Statements.Count) Then
 
-         'Check to make sure that we are in a state that can accept a run command.
-         'This means that we are NOT  in "no testplan", or NOT "Running"
+            'Check to make sure that we are in a state that can accept a run command.
+            'This means that we are NOT  in "no testplan", or NOT "Running"
 
-         If (muTxSLSimpleState = TxSLSimpleState.NotRun Or muTxSLSimpleState = TxSLSimpleState.Stopped) Then
-            'we are in a "runnable state"
-            ConfigButtonsAfterRun()
-            'Enable the failure timer.  This timer will allow us to recover
-            'if TxSL doesn't respond within the timeout period.
-            'Also post an attempting message to the display
-            tmrFailure.Enabled = True
-            msCommandAttempt = "Run"
-            rtbSystemStatus.SelectionColor = Color.Black
-            rtbSystemStatus.Text = LangLookup(modLocalization.txslLangIndex.gnAttemptingRun)
-            rtbOperatorMessage.Text = ""
-            TestExecSL1.Testplan.Run()
-         ElseIf (muTxSLSimpleState = TxSLSimpleState.paused) Then
-            'we are in a "continuable state"
-            ConfigButtonsAfterRun()
-            'Enable the failure timer.  This timer will allow us to recover
-            'if TxSL doesn't respond within the timeout period.
-            'Also post an attempting message to the display
-            tmrFailure.Enabled = True
-            msCommandAttempt = "Continue"
-            rtbSystemStatus.SelectionColor = Color.Black
-            rtbSystemStatus.Text = LangLookup(modLocalization.txslLangIndex.gnAttemptingContinue)
-            rtbOperatorMessage.Text = ""
-            TestExecSL1.Testplan.[Continue]()
-         Else
-            'we are not in a state for which we can use this button
-            Beep()
-         End If
-      End If
+            If (muTxSLSimpleState = TxSLSimpleState.NotRun Or muTxSLSimpleState = TxSLSimpleState.Stopped) Then
+                'we are in a "runnable state"
+                ConfigButtonsAfterRun()
+                'Enable the failure timer.  This timer will allow us to recover
+                'if TxSL doesn't respond within the timeout period.
+                'Also post an attempting message to the display
+                tmrFailure.Enabled = True
+                msCommandAttempt = "Run"
+                rtbSystemStatus.SelectionColor = Color.Black
+                rtbSystemStatus.Text = LangLookup(modLocalization.txslLangIndex.gnAttemptingRun)
+                rtbOperatorMessage.Text = ""
+                TestExecSL1.Testplan.Run()
+            ElseIf (muTxSLSimpleState = TxSLSimpleState.paused) Then
+                'we are in a "continuable state"
+                ConfigButtonsAfterRun()
+                'Enable the failure timer.  This timer will allow us to recover
+                'if TxSL doesn't respond within the timeout period.
+                'Also post an attempting message to the display
+                tmrFailure.Enabled = True
+                msCommandAttempt = "Continue"
+                rtbSystemStatus.SelectionColor = Color.Black
+                rtbSystemStatus.Text = LangLookup(modLocalization.txslLangIndex.gnAttemptingContinue)
+                rtbOperatorMessage.Text = ""
+                TestExecSL1.Testplan.[Continue]()
+            Else
+                'we are not in a state for which we can use this button
+                Beep()
+            End If
+        End If
 
-      Exit Sub
+        Exit Sub
 
 LocalErrorHandler:
-      frmErrorDialog.ErrorHandler(Err.Number, Err.Source & LocalSource, Err.Description)
+        frmErrorDialog.ErrorHandler(Err.Number, Err.Source & LocalSource, Err.Description)
 
-   End Sub
+    End Sub
 
 
     Private Sub cmdSelectVariant_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles cmdSelectVariant.Click
@@ -1329,7 +1331,7 @@ LocalErrorHandler:
 
                 Msg = "The test system is either Running, Paused, waiting at a breakpoint or waiting for a step.  " & vbCrLf & vbCrLf & "Pressing OK will result in the operator interface stopping, but the test system may continue to run, or it may halt with power still applied.  " & "Either condition may be hazardous.  " & vbCrLf & "Press OK if this behavior is acceptable.  " & vbCrLf & vbCrLf & "Pressing Cancel will result in control returning to the operator interface, where you can attempt a safe shutdown.  " & "However, it is likely that some data has been lost.  " & "TxSL will attempt to synchronize the state of testplan execution and the state of the operator interface.  " & vbCrLf & vbCrLf & "Press Cancel if this behavior is acceptable"
 
-                MsgResult = MsgBox(Msg, MsgBoxStyle.OKCancel + MsgBoxStyle.Critical, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name)
+                MsgResult = MsgBox(Msg, MsgBoxStyle.OkCancel + MsgBoxStyle.Critical, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name)
                 If MsgResult = MsgBoxResult.Cancel Then
                     tmrFailure.Enabled = False
                     Synch()
@@ -1880,7 +1882,7 @@ LocalErrorHandler:
         'report contents.
 
 
-      'Experiments (in VB6, not vb.net) have shown that keeping a running accumulation of report events in
+        'Experiments (in VB6, not vb.net) have shown that keeping a running accumulation of report events in
         'rtbReport.txt can slow the testplan, especially when many report messages are
         'arriving.
         'This is true even if using an approach where the .selstart position is
@@ -1891,25 +1893,25 @@ LocalErrorHandler:
         'The following code only shows the last four messages, but still accumulates
         'all the report messages.
 
-      'It is essentially a four string shift register
-      'old way
-      'msReportBlock1 = msReportBlock2
-      'msReportBlock2 = msReportBlock3
-      'msReportBlock3 = msReportBlock4
-      'msReportBlock4 = eventArgs.message
-      'rtbReport.Text = msReportBlock1 & msReportBlock2 & msReportBlock3 & msReportBlock4
+        'It is essentially a four string shift register
+        'old way
+        'msReportBlock1 = msReportBlock2
+        'msReportBlock2 = msReportBlock3
+        'msReportBlock3 = msReportBlock4
+        'msReportBlock4 = eventArgs.message
+        'rtbReport.Text = msReportBlock1 & msReportBlock2 & msReportBlock3 & msReportBlock4
 
         'This code accumulates the reports into the report block variable
-      msEntireReportBlock = msEntireReportBlock & eventArgs.message
+        msEntireReportBlock = msEntireReportBlock & eventArgs.message
 
-      'this code will autoscroll the report window
-      Dim ctr As Control = Me.ActiveControl
-      With Me.rtbReport
-         .Focus()
-         .AppendText(eventArgs.message)
-         .ScrollToCaret()
-      End With
-      ctr.Focus()
+        'this code will autoscroll the report window
+        Dim ctr As Control = Me.ActiveControl
+        With Me.rtbReport
+            .Focus()
+            .AppendText(eventArgs.message)
+            .ScrollToCaret()
+        End With
+        ctr.Focus()
         If (rtbReport.Lines.Length > rtbReport.MaxLength) Then
             rtbReport.Select(0, rtbReport.GetFirstCharIndexFromLine(rtbReport.Lines.Length - rtbReport.MaxLength))
             rtbReport.SelectedText = vbNullChar
@@ -2014,7 +2016,7 @@ LocalErrorHandler:
                 rtbSystemStatus.Text = LangLookup(modLocalization.txslLangIndex.gnError)
                 rtbReport.BackColor = System.Drawing.Color.White
                 rtbOperatorMessage.Text = LangLookup(modLocalization.txslLangIndex.gnErrorExitOpMsg)
-                MsgBox(LangLookup(modLocalization.txslLangIndex.gnErrorExitOpMsg), MsgBoxStyle.OKOnly, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name)
+                MsgBox(LangLookup(modLocalization.txslLangIndex.gnErrorExitOpMsg), MsgBoxStyle.OkOnly, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name)
         End Select
 
         'Update the report block with the entire contents
@@ -2084,7 +2086,7 @@ LocalErrorHandler:
                 rtbSystemStatus.Text = LangLookup(modLocalization.txslLangIndex.gnPauseError)
                 rtbReport.BackColor = System.Drawing.Color.White
                 rtbOperatorMessage.Text = LangLookup(modLocalization.txslLangIndex.gnPauseErrorOpMsg)
-                MsgBox(LangLookup(modLocalization.txslLangIndex.gnPauseErrorOpMsg), MsgBoxStyle.OKOnly, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name)
+                MsgBox(LangLookup(modLocalization.txslLangIndex.gnPauseErrorOpMsg), MsgBoxStyle.OkOnly, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name)
         End Select
 
         'disable the progress bar
@@ -2118,9 +2120,9 @@ LocalErrorHandler:
         'into the correct configuration following
         'the start of a testplan.
         'Dim nMaxTests As Short
-		' MBT 0002401 : TFS 0097976 lekf
-		' in VB.NET need declare as Integer for 32bit signed integer
-		Dim nMaxTests As Integer
+        ' MBT 0002401 : TFS 0097976 lekf
+        ' in VB.NET need declare as Integer for 32bit signed integer
+        Dim nMaxTests As Integer
 
         On Error GoTo LocalErrorHandler
         LocalSource = ":" & Me.Name & ":TestExecSL1_BeforeTestplanBegin"
@@ -2370,7 +2372,7 @@ LocalErrorHandler:
         ' MBT 0002651 : TFS 0105176 lekf , make the ProgressBar display correctly, the original code is work fine here
         'Dim cMax As Integer
         'cMax = (TestExecSL1.Testplan.CurrentTestCount + TestExecSL1.Testplan.ExecutableTestCount)
-		If TestExecSL1.Testplan.CurrentTestCount > prbTestplan.Maximum Then
+        If TestExecSL1.Testplan.CurrentTestCount > prbTestplan.Maximum Then
             prbTestplan.Maximum = TestExecSL1.Testplan.CurrentTestCount + TestExecSL1.Testplan.ExecutableTestCount
         End If
 
