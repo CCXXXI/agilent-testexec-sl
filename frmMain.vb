@@ -103,6 +103,7 @@ Friend Class frmMain
         Me.tmrFailure = New System.Windows.Forms.Timer(Me.components)
         Me.fraTestplanConfiguration = New System.Windows.Forms.GroupBox()
         Me.fraTxSLConfiguration = New System.Windows.Forms.GroupBox()
+        Me.medBarCode = New AxMSMask.AxMaskEdBox()
         Me.lblBarCode = New System.Windows.Forms.Label()
         Me.fraReport = New System.Windows.Forms.GroupBox()
         Me.rtbReport = New System.Windows.Forms.RichTextBox()
@@ -129,11 +130,11 @@ Friend Class frmMain
         Me.sbpTotal = New System.Windows.Forms.StatusBarPanel()
         Me.sbpYield = New System.Windows.Forms.StatusBarPanel()
         Me.sbpSince = New System.Windows.Forms.StatusBarPanel()
-        Me.medBarCode = New AxMSMask.AxMaskEdBox()
         Me.TestExecSL1 = New AxHPTestExecSL.AxTestExecSL()
         CType(Me.imglogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.fraTestplanConfiguration.SuspendLayout()
         Me.fraTxSLConfiguration.SuspendLayout()
+        CType(Me.medBarCode, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.fraReport.SuspendLayout()
         Me.fraOperatorMessage.SuspendLayout()
         Me.fraTestplanProgress.SuspendLayout()
@@ -148,7 +149,6 @@ Friend Class frmMain
         CType(Me.sbpTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sbpYield, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sbpSince, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.medBarCode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -398,6 +398,15 @@ Friend Class frmMain
         Me.fraTxSLConfiguration.TabStop = False
         Me.fraTxSLConfiguration.Text = "TxSL Configuration"
         '
+        'medBarCode
+        '
+        Me.medBarCode.Location = New System.Drawing.Point(149, 67)
+        Me.medBarCode.Name = "medBarCode"
+        Me.medBarCode.OcxState = CType(resources.GetObject("medBarCode.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.medBarCode.Size = New System.Drawing.Size(181, 19)
+        Me.medBarCode.TabIndex = 4
+        Me.medBarCode.Visible = False
+        '
         'lblBarCode
         '
         Me.lblBarCode.BackColor = System.Drawing.SystemColors.Control
@@ -412,6 +421,7 @@ Friend Class frmMain
         Me.lblBarCode.TabIndex = 25
         Me.lblBarCode.Text = "Bar Code"
         Me.lblBarCode.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblBarCode.Visible = False
         '
         'fraReport
         '
@@ -676,14 +686,6 @@ Friend Class frmMain
         Me.sbpSince.ToolTipText = "The date and time of the last reset of this data"
         Me.sbpSince.Width = 358
         '
-        'medBarCode
-        '
-        Me.medBarCode.Location = New System.Drawing.Point(149, 67)
-        Me.medBarCode.Name = "medBarCode"
-        Me.medBarCode.OcxState = CType(resources.GetObject("medBarCode.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.medBarCode.Size = New System.Drawing.Size(181, 19)
-        Me.medBarCode.TabIndex = 4
-        '
         'TestExecSL1
         '
         Me.TestExecSL1.Enabled = True
@@ -723,6 +725,7 @@ Friend Class frmMain
         CType(Me.imglogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.fraTestplanConfiguration.ResumeLayout(False)
         Me.fraTxSLConfiguration.ResumeLayout(False)
+        CType(Me.medBarCode, System.ComponentModel.ISupportInitialize).EndInit()
         Me.fraReport.ResumeLayout(False)
         Me.fraOperatorMessage.ResumeLayout(False)
         Me.fraTestplanProgress.ResumeLayout(False)
@@ -738,7 +741,6 @@ Friend Class frmMain
         CType(Me.sbpTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sbpYield, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sbpSince, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.medBarCode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -756,8 +758,8 @@ Friend Class frmMain
             End If
             DefInstance = m_vb6FormDefInstance
         End Get
-        Set
-            m_vb6FormDefInstance = Value
+        Set(ByVal value As frmMain)
+            m_vb6FormDefInstance = value
         End Set
     End Property
 #End Region
