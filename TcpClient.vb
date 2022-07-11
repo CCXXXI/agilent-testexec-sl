@@ -7,7 +7,7 @@ Public Class TcpClient
     ReadOnly _readCmd As Byte() = New Byte() {&HFE, &H2, &H0, &H0, &H0, &H8, &H6D, &HC3}
     Const YesCode As Byte = &H1
     ReadOnly _report As Byte() = New Byte() {&HFE, &H5, &H0, &H0, &HFF, &H0, &H98, &H35}
-    ReadOnly _expectResponse As Byte() = New Byte() {&HFE, &H5, &H0, &H0, &HFF, &H0, &H98, &H35}
+    ReadOnly _expectResponse As Byte() = New Byte() {&HFE, &H5, &H0, &H0, &HFF, &H0, &H98, &H35, &H0}
 
     ReadOnly _tcpClient As New Net.Sockets.TcpClient()
     Dim _networkStream As NetworkStream
