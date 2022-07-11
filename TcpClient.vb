@@ -41,8 +41,8 @@ Public Class TcpClient
     Public Function Report() As Boolean
         _networkStream.Write(_report, 0, _report.Length)
 
-        Dim bytes(_expectResponse.Length - 1) As Byte
-        _networkStream.Read(bytes, 0, CInt(_expectResponse.Length - 1))
+        Dim bytes(_expectResponse.Length) As Byte
+        _networkStream.Read(bytes, 0, CInt(_expectResponse.Length))
 
         Return bytes.SequenceEqual(_expectResponse)
     End Function
