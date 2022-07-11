@@ -2096,6 +2096,11 @@ LocalErrorHandler:
         'finally, set up the focus appropriately on the user interface
         Me.Cursor = mnOldMousePointer
         ConfigButtonsBeforeRun()
+
+        If _client.Connected Then
+            FixBox.BackColor = IIf(_client.Report(), Color.Red, Color.Yellow)
+        End If
+        InitSerialInput()
         Exit Sub
 
 LocalErrorHandler:
@@ -2320,16 +2325,15 @@ LocalErrorHandler:
         txtSerialNumber.Text = ""
     End Sub
 
+    ReadOnly _client As New TcpClient()
     Private Sub BackgroundThread()
-        Dim client As New TcpClient()
-
-        If Not client.Connect() Then
+        If Not _client.Connect() Then
             Return
         End If
         SysBox.BackColor = Color.Green
 
         While True
-            If client.Check() Then
+            If _client.Check() Then
                 FixBox.BackColor = Color.Green
                 Invoke(Sub()
                            cmdRun_Click(cmdRun, New System.EventArgs)
