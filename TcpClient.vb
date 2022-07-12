@@ -5,8 +5,8 @@ Public Class TcpClient
     Const Host As String = "localhost"
     Const Port As Integer = 8000
     ReadOnly _readCmd As Byte() = New Byte() {&HFE, &H2, &H0, &H0, &H0, &H8, &H6D, &HC3}
-    Const YesCode As Byte = &H1
-    ReadOnly _report As Byte() = New Byte() {&HFE, &H5, &H0, &H0, &HFF, &H0, &H98, &H35}
+    Const RunCode As Byte = &H1
+    ReadOnly _reportCmd As Byte() = New Byte() {&HFE, &H5, &H0, &H0, &HFF, &H0, &H98, &H35}
 
     ReadOnly _tcpClient As New Net.Sockets.TcpClient()
     Dim _networkStream As NetworkStream
@@ -25,28 +25,31 @@ Public Class TcpClient
 
     Public Function Check() As Boolean
         ' Check if the button is pressed
-
-        ' send command
-        _networkStream.Write(_readCmd, 0, _readCmd.Length)
-
-        ' read result
-        Dim response(_tcpClient.ReceiveBufferSize) As Byte
-        _networkStream.Read(response, 0, CInt(_tcpClient.ReceiveBufferSize))
-
-        ' check
-        Return response(3) = YesCode
+        Return Command(_readCmd)(3) = RunCode
     End Function
 
+
     Public Function Report() As Boolean
-        _networkStream.Write(_report, 0, _report.Length)
-
-        Dim response(_tcpClient.ReceiveBufferSize) As Byte
-        _networkStream.Read(response, 0, CInt(_tcpClient.ReceiveBufferSize))
-
-        Return response.Take(_report.Length).SequenceEqual(_report)
+        Return Command(_reportCmd).Take(_reportCmd.Length).SequenceEqual(_reportCmd)
     End Function
 
     Public Function Connected() As Boolean
         Return _tcpClient.Connected
+    End Function
+
+    Private Function Command(cmd As Byte()) As Byte()
+        ' Send a command to the server and return the response.
+        Write(cmd)
+        Return Read()
+    End Function
+
+    Private Sub Write(cmd As Byte())
+        _networkStream.Write(cmd, 0, cmd.Length)
+    End Sub
+
+    Private Function Read() As Byte()
+        Dim response(_tcpClient.ReceiveBufferSize) As Byte
+        _networkStream.Read(response, 0, CInt(_tcpClient.ReceiveBufferSize))
+        Return response
     End Function
 End Class
