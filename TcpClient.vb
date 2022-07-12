@@ -14,7 +14,7 @@ Public Class TcpClient
 
     Public Function Connect() As Boolean
         ' Try to connect to the server
-        ' Return true if connected, false if not
+        ' Return true if connected successfully, false if not
         Try
             _tcpClient.Connect(Host, Port)
         Catch ex As SocketException
