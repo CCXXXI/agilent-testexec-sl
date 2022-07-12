@@ -1827,6 +1827,11 @@ LocalErrorHandler:
 
     End Sub
 
+    Private Sub InitSerialInput()
+        ' Set focus to the input box and clear it
+        txtSerialNumber.Focus()
+        txtSerialNumber.Text = ""
+    End Sub
 
     Private Sub TestExecSL1_AdviseClearReport(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles TestExecSL1.AdviseClearReport
 
@@ -2316,14 +2321,8 @@ LocalErrorHandler:
             cmdLoadTestplan.Focus()
         End If
 
-        _thread.Start()
-    End Sub
-    ReadOnly _thread As New Thread(AddressOf BackgroundThread)
-
-    Private Sub InitSerialInput()
-        ' Set focus to the input box and clear it
-        txtSerialNumber.Focus()
-        txtSerialNumber.Text = ""
+        Dim thread As New Thread(AddressOf BackgroundThread)
+        thread.Start()
     End Sub
 
     ReadOnly _client As New TcpClient()
