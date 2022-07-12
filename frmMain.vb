@@ -1824,7 +1824,7 @@ LocalErrorHandler:
         'configure the operator message box
         Me.rtbOperatorMessage.Text = LangLookup(modLocalization.txslLangIndex.gnReadyToTest)
 
-
+        _readyToRunEvent.Set()
     End Sub
 
     Private Sub InitSerialInput()
@@ -2102,11 +2102,11 @@ LocalErrorHandler:
         Me.Cursor = mnOldMousePointer
         ConfigButtonsBeforeRun()
 
-        If _client.Connected Then
-            FixBox.BackColor = IIf(_client.Report(), Color.Red, Color.Yellow)
+        If _tcpClient.Connected Then
+            FixBox.BackColor = IIf(_tcpClient.Report(), Color.Red, Color.Yellow)
         End If
         InitSerialInput()
-        _pause.Set()
+        _testDoneEvent.Set()
         Exit Sub
 
 LocalErrorHandler:
@@ -2325,21 +2325,25 @@ LocalErrorHandler:
         thread.Start()
     End Sub
 
-    ReadOnly _client As New TcpClient()
-    Dim _pause As New Threading.AutoResetEvent(False)
+    ReadOnly _tcpClient As New TcpClient()
+    ReadOnly _readyToRunEvent As New AutoResetEvent(False)
+    ReadOnly _testDoneEvent As New AutoResetEvent(False)
     Private Sub BackgroundThread()
-        If Not _client.Connect() Then
+        If Not _tcpClient.Connect() Then
             Return
         End If
+
         SysBox.BackColor = Color.Green
+        _readyToRunEvent.WaitOne()
 
         While True
-            If _client.Check() Then
+            If _tcpClient.Check() Then
                 FixBox.BackColor = Color.Green
                 Invoke(Sub()
                            cmdRun_Click(cmdRun, New System.EventArgs)
                        End Sub)
-                _pause.WaitOne()
+                _testDoneEvent.WaitOne()
+                _testDoneEvent.Reset()
             End If
             Thread.Sleep(500)
         End While
