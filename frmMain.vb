@@ -2102,9 +2102,7 @@ LocalErrorHandler:
         Me.Cursor = mnOldMousePointer
         ConfigButtonsBeforeRun()
 
-        If _tcpClient.Connected Then
-            FixBox.BackColor = IIf(_tcpClient.Report(), Color.Red, Color.Yellow)
-        End If
+        FixBox.BackColor = IIf(_tcpClient.Report(), Color.Red, Color.Yellow)
         InitSerialInput()
         _testDoneEvent.Set()
         Exit Sub

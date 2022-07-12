@@ -30,10 +30,10 @@ Public Class TcpClient
 
 
     Public Function Report() As Boolean
-        Return Command(_reportCmd).Take(_reportCmd.Length).SequenceEqual(_reportCmd)
+        Return Not Connected() Or Command(_reportCmd).Take(_reportCmd.Length).SequenceEqual(_reportCmd)
     End Function
 
-    Public Function Connected() As Boolean
+    Private Function Connected() As Boolean
         Return _tcpClient.Connected
     End Function
 
