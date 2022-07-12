@@ -2337,9 +2337,9 @@ LocalErrorHandler:
         While True
             If _tcpClient.Check() Then
                 FixBox.BackColor = Color.Green
-                Invoke(Sub()
-                           cmdRun_Click(cmdRun, New System.EventArgs)
-                       End Sub)
+                BeginInvoke(Sub()
+                                cmdRun_Click(cmdRun, New System.EventArgs)
+                            End Sub)
                 _testDoneEvent.WaitOne()
                 _testDoneEvent.Reset()
             End If
