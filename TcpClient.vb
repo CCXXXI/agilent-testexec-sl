@@ -7,7 +7,6 @@ Public Class TcpClient
     ReadOnly _readCmd As Byte() = New Byte() {&HFE, &H2, &H0, &H0, &H0, &H8, &H6D, &HC3}
     Const YesCode As Byte = &H1
     ReadOnly _report As Byte() = New Byte() {&HFE, &H5, &H0, &H0, &HFF, &H0, &H98, &H35}
-    ReadOnly _expectResponse As Byte() = New Byte() {&HFE, &H5, &H0, &H0, &HFF, &H0, &H98, &H35, &H0}
 
     ReadOnly _tcpClient As New Net.Sockets.TcpClient()
     Dim _networkStream As NetworkStream
@@ -31,20 +30,20 @@ Public Class TcpClient
         _networkStream.Write(_readCmd, 0, _readCmd.Length)
 
         ' read result
-        Dim bytes(_tcpClient.ReceiveBufferSize) As Byte
-        _networkStream.Read(bytes, 0, CInt(_tcpClient.ReceiveBufferSize))
+        Dim response(_tcpClient.ReceiveBufferSize) As Byte
+        _networkStream.Read(response, 0, CInt(_tcpClient.ReceiveBufferSize))
 
         ' check
-        Return bytes(3) = YesCode
+        Return response(3) = YesCode
     End Function
 
     Public Function Report() As Boolean
         _networkStream.Write(_report, 0, _report.Length)
 
-        Dim bytes(_expectResponse.Length - 1) As Byte
-        _networkStream.Read(bytes, 0, CInt(_expectResponse.Length - 1))
+        Dim response(_tcpClient.ReceiveBufferSize) As Byte
+        _networkStream.Read(response, 0, CInt(_tcpClient.ReceiveBufferSize))
 
-        Return bytes.SequenceEqual(_expectResponse)
+        Return response.Take(_report.Length).SequenceEqual(_report)
     End Function
 
     Public Function Connected() As Boolean
