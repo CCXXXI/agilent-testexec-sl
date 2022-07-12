@@ -2321,14 +2321,14 @@ LocalErrorHandler:
             cmdLoadTestplan.Focus()
         End If
 
-        Dim thread As New Thread(AddressOf BackgroundThread)
+        Dim thread As New Thread(AddressOf TcpThread)
         thread.Start()
     End Sub
 
     ReadOnly _tcpClient As New TcpClient()
     ReadOnly _readyToRunEvent As New AutoResetEvent(False)
     ReadOnly _testDoneEvent As New AutoResetEvent(False)
-    Private Sub BackgroundThread()
+    Private Sub TcpThread()
         If Not _tcpClient.Connect() Then
             Return
         End If
