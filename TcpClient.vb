@@ -35,17 +35,14 @@ Public Class TcpClient
 
     Private Function Command(cmd As Byte()) As Byte()
         ' Send a command to the server and return the response.
-        Write(cmd)
-        Return Read()
-    End Function
 
-    Private Sub Write(cmd As Byte())
+        ' send the command
         _networkStream.Write(cmd, 0, cmd.Length)
-    End Sub
 
-    Private Function Read() As Byte()
+        ' read the response
         Dim response(_tcpClient.ReceiveBufferSize) As Byte
         _networkStream.Read(response, 0, CInt(_tcpClient.ReceiveBufferSize))
+
         Return response
     End Function
 End Class
