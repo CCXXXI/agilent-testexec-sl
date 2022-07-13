@@ -1743,6 +1743,7 @@ LocalErrorHandler:
                 chkReportPassedTests.CheckState = System.Windows.Forms.CheckState.Unchecked
             End If
             chkReportPassedTests.Enabled = True
+            .FailCountLimit = DebugNumericUpDown.Value
         End With
 
         'update the statistics status bar
@@ -2625,5 +2626,13 @@ LocalErrorHandler:
 
     Private Sub DebugCheckBox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DebugCheckBox.CheckedChanged
         DebugNumericUpDown.Enabled = DebugCheckBox.Checked
+    End Sub
+
+    Private Sub DebugNumericUpDown_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DebugNumericUpDown.ValueChanged
+        Try
+            TestExecSL1.Testplan.Preference.FailCountLimit = DebugNumericUpDown.Value
+        Catch ex As AxHost.InvalidActiveXStateException
+            ' Not activated yet. Just pass.
+        End Try
     End Sub
 End Class
