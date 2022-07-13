@@ -89,7 +89,7 @@ Friend Class frmMain
     Friend WithEvents FixLabel As System.Windows.Forms.Label
     Friend WithEvents FixBox As System.Windows.Forms.PictureBox
     Friend WithEvents DebugCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents DebugNumericUpDown As System.Windows.Forms.NumericUpDown
     Friend WithEvents sbpCurrentTestName As System.Windows.Forms.StatusBarPanel
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -144,7 +144,7 @@ Friend Class frmMain
         Me.FixLabel = New System.Windows.Forms.Label()
         Me.FixBox = New System.Windows.Forms.PictureBox()
         Me.DebugCheckBox = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.DebugNumericUpDown = New System.Windows.Forms.NumericUpDown()
         CType(Me.imglogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.fraTestplanConfiguration.SuspendLayout()
         Me.fraTxSLConfiguration.SuspendLayout()
@@ -166,7 +166,7 @@ Friend Class frmMain
         CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SysBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FixBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DebugNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chkReportPassedTests
@@ -759,20 +759,20 @@ Friend Class frmMain
         Me.DebugCheckBox.Text = "debug"
         Me.DebugCheckBox.UseVisualStyleBackColor = True
         '
-        'NumericUpDown1
+        'DebugNumericUpDown
         '
-        Me.NumericUpDown1.Enabled = False
-        Me.NumericUpDown1.Location = New System.Drawing.Point(664, 19)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(50, 20)
-        Me.NumericUpDown1.TabIndex = 39
+        Me.DebugNumericUpDown.Enabled = False
+        Me.DebugNumericUpDown.Location = New System.Drawing.Point(664, 19)
+        Me.DebugNumericUpDown.Name = "DebugNumericUpDown"
+        Me.DebugNumericUpDown.Size = New System.Drawing.Size(50, 20)
+        Me.DebugNumericUpDown.TabIndex = 39
         '
         'frmMain
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(758, 552)
-        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.DebugNumericUpDown)
         Me.Controls.Add(Me.DebugCheckBox)
         Me.Controls.Add(Me.FixLabel)
         Me.Controls.Add(Me.FixBox)
@@ -821,7 +821,7 @@ Friend Class frmMain
         CType(Me.TestExecSL1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SysBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FixBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DebugNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
