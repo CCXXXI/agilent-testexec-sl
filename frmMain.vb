@@ -2087,7 +2087,7 @@ LocalErrorHandler:
 
         ' Calc the name of the log file
         Dim dirName As String = "C:\TestExecLogs\" & Regex.Match(TestExecSL1.Testplan.Path, "[^\\]+(?=\.tpa)").Value
-        Dim fileName As String = Date.Now.ToString("yyyy-MM-dd HH mm ss ") & txtSerialNumber.Text & ".txt"
+        Dim fileName As String = Date.Now.ToString("yyyyMMdd-HHmmss_") & txtSerialNumber.Text & ".txt"
         Dim filePath As String = dirName & "\" & fileName
 
         ' Save to file
