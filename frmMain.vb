@@ -763,9 +763,11 @@ Friend Class frmMain
         '
         Me.DebugNumericUpDown.Enabled = False
         Me.DebugNumericUpDown.Location = New System.Drawing.Point(664, 19)
+        Me.DebugNumericUpDown.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.DebugNumericUpDown.Name = "DebugNumericUpDown"
         Me.DebugNumericUpDown.Size = New System.Drawing.Size(50, 20)
         Me.DebugNumericUpDown.TabIndex = 39
+        Me.DebugNumericUpDown.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'frmMain
         '
