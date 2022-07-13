@@ -704,14 +704,14 @@ Friend Class frmMain
         Me.TestExecSL1.Location = New System.Drawing.Point(379, 6)
         Me.TestExecSL1.Name = "TestExecSL1"
         Me.TestExecSL1.OcxState = CType(resources.GetObject("TestExecSL1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.TestExecSL1.Size = New System.Drawing.Size(40, 40)
+        Me.TestExecSL1.Size = New System.Drawing.Size(64, 58)
         Me.TestExecSL1.TabIndex = 24
         Me.TestExecSL1.Visible = False
         '
         'SysBox
         '
         Me.SysBox.BackColor = System.Drawing.Color.Red
-        Me.SysBox.Location = New System.Drawing.Point(512, 15)
+        Me.SysBox.Location = New System.Drawing.Point(477, 15)
         Me.SysBox.Name = "SysBox"
         Me.SysBox.Size = New System.Drawing.Size(31, 29)
         Me.SysBox.TabIndex = 34
@@ -720,7 +720,7 @@ Friend Class frmMain
         'SysLabel
         '
         Me.SysLabel.AutoSize = True
-        Me.SysLabel.Location = New System.Drawing.Point(481, 21)
+        Me.SysLabel.Location = New System.Drawing.Point(446, 21)
         Me.SysLabel.Name = "SysLabel"
         Me.SysLabel.Size = New System.Drawing.Size(25, 14)
         Me.SysLabel.TabIndex = 35
@@ -729,7 +729,7 @@ Friend Class frmMain
         'FixLabel
         '
         Me.FixLabel.AutoSize = True
-        Me.FixLabel.Location = New System.Drawing.Point(591, 23)
+        Me.FixLabel.Location = New System.Drawing.Point(525, 21)
         Me.FixLabel.Name = "FixLabel"
         Me.FixLabel.Size = New System.Drawing.Size(19, 14)
         Me.FixLabel.TabIndex = 37
@@ -738,7 +738,7 @@ Friend Class frmMain
         'FixBox
         '
         Me.FixBox.BackColor = System.Drawing.Color.Red
-        Me.FixBox.Location = New System.Drawing.Point(622, 17)
+        Me.FixBox.Location = New System.Drawing.Point(556, 15)
         Me.FixBox.Name = "FixBox"
         Me.FixBox.Size = New System.Drawing.Size(31, 29)
         Me.FixBox.TabIndex = 36
