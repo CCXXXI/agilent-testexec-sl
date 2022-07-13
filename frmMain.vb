@@ -1,6 +1,8 @@
 Option Strict Off
 Option Explicit On
 
+Imports System.IO
+Imports System.Text.RegularExpressions
 Imports System.Threading
 
 Friend Class frmMain
@@ -2082,6 +2084,18 @@ LocalErrorHandler:
 
         'Update the report block with the entire contents
         rtbReport.Text = msEntireReportBlock
+
+        ' Calc the name of the log file
+        Dim dirName As String = "C:\TestExecLogs\" & Regex.Match(TestExecSL1.Testplan.Path, "[^\\]+(?=\.tpa)").Value
+        Dim fileName As String = Date.Now.ToString("yyyyMMdd-HHmmss_") & txtSerialNumber.Text & ".txt"
+        Dim filePath As String = dirName & "\" & fileName
+
+        ' Save to file
+        My.Computer.FileSystem.CreateDirectory(dirName)
+        Using sw As New StreamWriter(File.Open(filePath, FileMode.OpenOrCreate))
+            sw.WriteLine(msEntireReportBlock)
+        End Using
+
         If gbTxSLTestplanTimeEnabled Then
             gdtTestplanStopTime = TimeOfDay
             rtbReport.Text = rtbReport.Text & "Total test time: " & VB6.Format(System.DateTime.FromOADate(gdtTestplanStopTime.ToOADate - gdtTestplanStartTime.ToOADate), "h:mm:ss")
