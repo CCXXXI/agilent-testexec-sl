@@ -2620,4 +2620,8 @@ LocalErrorHandler:
     Private Sub prbTestplan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prbTestplan.Click
 
     End Sub
+
+    Private Sub DebugCheckBox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DebugCheckBox.CheckedChanged
+        DebugNumericUpDown.Enabled = DebugCheckBox.Checked
+    End Sub
 End Class
