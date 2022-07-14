@@ -398,4 +398,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 # old vb
-bin_d/
+bin_[dr]/
